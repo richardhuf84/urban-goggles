@@ -25,12 +25,12 @@ export default {
       posts: null,
     };
   },
-  created() {
-    this.$fetch();
-  },
   async fetch() {
     const posts = await this.$prismic.api.query('');
     this.posts = posts.results.filter((post) => post.type === 'post');
+  },
+  created() {
+    this.$fetch();
   },
 };
 </script>
@@ -42,6 +42,7 @@ img {
 }
 
 .posts {
+  max-width: 65vw;
   text-align: left;
 }
 
