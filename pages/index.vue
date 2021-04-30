@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-    <div>
-      <Posts />
-    </div>
+    <div>Nuxt, Prismic and Netlify</div>
   </div>
 </template>
 
