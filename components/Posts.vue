@@ -25,14 +25,12 @@ export default {
       posts: null,
     };
   },
-  asyncData() {
-    this.getContent();
+  created() {
+    this.$fetch();
   },
-  methods: {
-    async getContent() {
-      const posts = await this.$prismic.api.query('');
-      this.posts = posts.results.filter((post) => post.type === 'post');
-    },
+  async fetch() {
+    const posts = await this.$prismic.api.query('');
+    this.posts = posts.results.filter((post) => post.type === 'post');
   },
 };
 </script>
