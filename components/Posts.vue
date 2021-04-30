@@ -4,7 +4,7 @@
     <div v-for="(post, index) in posts" :key="index" class="post">
       <figure class="hero">
         <prismic-image :field="post.data.post_hero" />
-        <figcaption>
+        <figcaption class="hero__caption">
           <prismic-rich-text :field="post.data.image_attribution" />
         </figcaption>
       </figure>
@@ -47,16 +47,19 @@ img {
 }
 
 .hero {
-  max-width: 50vw;
   margin: 0;
   flex-basis: 33%;
+}
+
+.hero__caption {
+  padding: 0 20px;
 }
 
 .post {
   display: flex;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  flex-direction: column;
   margin: 20px;
-  /* padding: 20px; */
 }
 
 .post__content {
