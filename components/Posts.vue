@@ -1,19 +1,19 @@
 <template>
-  <div>
+  <div class="posts">
     <h1>Posts</h1>
-    <div v-for="(post, index) in posts" :key="index">
-      <h3>
-        <prismic-rich-text :field="post.data.post_title" />
-      </h3>
-
+    <div v-for="(post, index) in posts" :key="index" class="post">
       <figure class="hero">
         <prismic-image :field="post.data.post_hero" />
+        <figcaption>
+          <prismic-rich-text :field="post.data.image_attribution" />
+        </figcaption>
       </figure>
-      <figcaption>
-        <prismic-rich-text :field="post.data.image_attribution" />
-      </figcaption>
 
-      <prismic-rich-text :field="post.data.post_body" />
+      <div class="post__content">
+        <prismic-rich-text :field="post.data.post_title" />
+
+        <prismic-rich-text :field="post.data.post_body" />
+      </div>
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
       posts: null,
     };
   },
-  created() {
+  asyncData() {
     this.getContent();
   },
   methods: {
@@ -43,8 +43,25 @@ img {
   height: auto;
 }
 
+.posts {
+  text-align: left;
+}
+
 .hero {
   max-width: 50vw;
-  margin: 0 auto;
+  margin: 0;
+  flex-basis: 33%;
+}
+
+.post {
+  display: flex;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  margin: 20px;
+  /* padding: 20px; */
+}
+
+.post__content {
+  flex-basis: 66%;
+  padding: 20px;
 }
 </style>
