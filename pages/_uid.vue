@@ -3,6 +3,12 @@
     <prismic-rich-text :field="page.data.page_title" />
 
     <prismic-rich-text :field="page.data.body" />
+
+    <Display
+      v-for="(display, index) in page.data.display"
+      :key="index"
+      :display="display"
+    />
   </div>
 </template>
 
@@ -16,11 +22,6 @@ export default {
     } else {
       error({ statusCode: 404, message: 'Page not found' });
     }
-  },
-  data() {
-    return {
-      page: null,
-    };
   },
 };
 </script>

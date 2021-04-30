@@ -36,11 +36,6 @@ export default {
 </script>
 
 <style scoped>
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .posts {
   max-width: 65vw;
   text-align: left;
