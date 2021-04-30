@@ -43,6 +43,7 @@ export default {
 .display {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .display__image {
