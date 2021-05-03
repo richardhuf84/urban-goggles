@@ -11,7 +11,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'My nuxt and Prismic.io JAMStack site.' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'My nuxt and Prismic.io JAMStack site.',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -28,14 +32,17 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    ['@nuxtjs/eslint-module', {
-      fix: true
-    }],
-    '@nuxtjs/prismic'
+    [
+      '@nuxtjs/eslint-module',
+      {
+        fix: true,
+      },
+    ],
+    '@nuxtjs/prismic',
   ],
 
   prismic: {
-    endpoint: 'https://jamstack-example.cdn.prismic.io/api/v2'
+    endpoint: 'https://urban-goggles.cdn.prismic.io/api/v2',
     /* see configuration for more */
   },
 
@@ -50,4 +57,4 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-}
+};
