@@ -1,6 +1,10 @@
 # Urban goggles
 
-A proof of concept for using Nuxt, Prismic and Netlify.
+## A JAMStack demo
+
+A proof of concept for using of using a headless CMS, with server-side rendered content.
+
+Uses (https://nuxtjs.org)[Nuxt], (https://prismic.io)[Prismic], hosted on (https://netlify.com)[Netlify].
 
 ## Demo
 
