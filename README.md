@@ -1,5 +1,11 @@
-# JAMStack-example
+# Urban goggles
 
+A proof of concept for using Nuxt, Prismic and Netlify.
+
+## Demo
+
+* (View the demo)[https://urban-goggles-2750c0.netlify.app/] 
+* (Read a blog post)[https://richardhuf.com.au/building-a-jam-stack-site-with-nuxt-prismic-and-netlify/] about the POC
 ## Build Setup
 
 ```bash
